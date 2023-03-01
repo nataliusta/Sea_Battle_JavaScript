@@ -4,8 +4,8 @@ let location2 = location1 + 1;
 let location3 = location2 + 1;
 let guess; // current try
 let hits = 0; // successful hit
-let guesses = 0;
-let isSunk = false;
+let guesses = 0; // number of tries
+let isSunk = false; // default state of ship
 
 while (isSunk == false) { // while ship is not sank
     guess = prompt('Ready, aim, fire! (Enter a number from  0 till 6):'); // getting shot coordinates
