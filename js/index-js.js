@@ -27,6 +27,6 @@ while (isSunk == false) { // while ship is not sank
     }
 }
 
-let stats = 'You took ' + guesses + 'guesses to sink the battleship, ' +
+let stats = 'You took ' + guesses + ' guesses to sink the battleship, ' +
             'which means your shooting accurancy was ' + (3/guesses);
 alert(stats);
