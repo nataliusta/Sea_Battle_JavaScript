@@ -19,7 +19,7 @@ while (isSunk == false) { // while ship is not sank
             hits = hits + 1; // add one more try
             if (hits == 3) {
                 isSunk = true;
-                alert('You sank my battleship!')
+                alert('You sank my battleship!');
             }
         } else { // if all of three conditions are false
             alert('MISS');
