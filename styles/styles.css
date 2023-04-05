@@ -10,6 +10,37 @@ div#board {
     background: url('../img/board.jpg') no-repeat;
 }
 
-.field-title {
-    color: white;
+div#messageArea {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: rgb(83, 175, 19);
 }
+
+table {
+    position: absolute;
+    top: 98px;
+    left: 173px;
+    border-spacing: 0px;
+}
+
+td {
+    width: 94px;
+    height: 94px;
+}
+
+form {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px;
+    background-color: rgb(83, 175, 19);
+}
+
+form input {
+   background-color: rgb(152, 207, 113);
+   border-color: rgb(83, 175, 19);
+   font-size: 1em;
+}
+
+
