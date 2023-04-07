@@ -24,18 +24,24 @@ view.displayHit('26');
 
 view.displayMessage('Tap tap, is this thing on?');
 
-let ship1 = {
-    locations: ['10','20','30'],
-    hits: ['','','']
+let model = {
+    boardSize: 7,
+    numShips: 3,
+    shipLength: 3,
+    shipsSunk: 0,
+    
+    ships: [
+        {
+            locations: ['06','16','26'],
+            hits: ['','','']
+        },
+        {
+            locations: ['24','34','44'],
+            hits: ['','','']
+        },
+        {
+            locations: ['10','11','12'],
+            hits: ['','','']
+        }
+    ]
 };
-
-let ship2 = {
-    locations: ['32','33','34'],
-    hits: ['','','']
-};
-
-let ship3 = {
-    locations: ['63','64','65'],
-    hits: ['','','hit']
-};
-
