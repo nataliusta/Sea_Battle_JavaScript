@@ -15,13 +15,6 @@ let view = {
     }
 };
 
-view.displayMiss('00'); // test
-view.displayHit('34');
-view.displayMiss('55');
-view.displayHit('42');
-view.displayMiss('25');
-view.displayHit('26');
-
 view.displayMessage('Tap tap, is this thing on?');
 
 let model = {
@@ -46,15 +39,23 @@ let model = {
     ],
 
     fire: function(guess) {
-        for(let i = 0; i < this.numShips; i++) {
+        for (let i = 0; i < this.numShips; i++) {
             let ship = this.ships[i];
             let index = ship.locations.indexOf(guess);
             if (index >= 0) {
                 ship.hits[index] = 'hit';
+                view.displayHit(guess);
+                view.displayMessage('HİT!');
+                if (this.isSunk(ship)) {
+                    view.displayMessage('You sunk my battleship!');
+                    this.shipsSunk++;
+                }
                 return true;
             }
-            return false;
         }
+        view.displayMiss(guess);
+        view.displayMessage('You missed!');
+        return false;
     },
 
     isSunk: function(ship) {
@@ -66,3 +67,15 @@ let model = {
         return true; // ship is sunk
     }
 };
+
+model.fire('53');
+model.fire('06');
+model.fire('16');
+model.fire('26');
+model.fire('34');
+model.fire('24');
+model.fire('44');
+model.fire('66');
+model.fire('11');
+model.fire('12');
+model.fire('15');
