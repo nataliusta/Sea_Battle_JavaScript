@@ -15,10 +15,10 @@ let view = {
     }
 };
 
-view.displayMiss('00');
+view.displayMiss('00'); // test
 view.displayHit('34');
 view.displayMiss('55');
-view.displayHit('12');
+view.displayHit('42');
 view.displayMiss('25');
 view.displayHit('26');
 
@@ -48,6 +48,12 @@ let model = {
     fire: function(guess) {
         for(let i = 0; i < this.numShips; i++) {
             let ship = this.ships[i];
+            let index = ship.locations.indexOf(guess);
+            if (index >= 0) {
+                ship.hits[index] = 'hit';
+                return true;
+            }
+            return false;
         }
     }
 };
