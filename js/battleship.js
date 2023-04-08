@@ -79,3 +79,11 @@ model.fire('66');
 model.fire('11');
 model.fire('12');
 model.fire('15');
+
+let controller = {
+    guesses: 0,
+
+    processGuess: function(guess) {
+
+    }
+};
