@@ -99,10 +99,13 @@ function parseGuess(guess) {
         let column = guess.charAt(1);
 
         if (isNaN(row) || isNaN(column)) {
-            alert('Oops! That is not on the board');
+            alert('Oops! That is not on the board.');
         } else if (row < 0 || row >= model.boardSize || 
-                           column < 0 || column >= model.boardSize) {
+                           column < 0 || column >= model.boardSize) { // check if guesses are from 0 till 6
             alert('Oops, that is off the board.');
+        } else {
+            return row + column;
         }
     }
+    return null;
 }
