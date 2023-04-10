@@ -87,3 +87,9 @@ let controller = {
 
     }
 };
+
+function parseGuess(guess) {
+    if (guess === null || guess.length !== 2) {
+        alert('Oops! Please enter a letter and a number on the board.');
+    }
+}
