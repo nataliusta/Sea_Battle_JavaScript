@@ -108,6 +108,9 @@ function parseGuess(guess) {
 function handleFireButton() {
     let guessInput = document.getElementById('guessInput');
     let guess = guessInput.value;
+    controller.processGuess(guess);
+
+    guessInput.value = ''; // to empty the value of input field
 }
 
 function init() {
